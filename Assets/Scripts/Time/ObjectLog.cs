@@ -60,11 +60,14 @@ public class ObjectLog : MonoBehaviour
     void SetLog(ObjectAction curobj)
     {
         curobj.Character = character;
+        curobj.IsDodge = character.IsDodge;
+        curobj.IsIdle = character.IsIdle;
+        curobj.IsMove = character.IsMove;
         curobj.Time = timeManager.time;
         curobj.Position = character.transform.position;
         curobj.Direction = character.Move_Direction;
         curobj.Speed = character.Now_Speed;
-        curobj.State = character.CurrentState;
+        //curobj.State = character.CurrentState;
         //curobj.AnimatorController = character.CurrentState.AnimatorController_CharacterState;
     }
 

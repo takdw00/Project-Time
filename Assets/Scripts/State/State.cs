@@ -3,7 +3,10 @@
 public abstract class State : MonoBehaviour
 {
     private Character characterRef;
+
+    protected TimeManager timeManager;
     protected Character CharacterRef { get { return characterRef; } private set { } }
+
 
     //캐릭터의 해당 상태 애니메이션 컨트롤러
     [SerializeField] protected RuntimeAnimatorController animatorController_CharacterState;
@@ -15,6 +18,10 @@ public abstract class State : MonoBehaviour
     protected virtual void Awake()
     {
         characterRef = GetComponent<Character>();
+    }
+    private void Start()
+    {
+        timeManager = GameObject.Find("TimeManager").GetComponent<TimeManager>();
     }
 
     public abstract void Execution();

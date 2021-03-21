@@ -294,9 +294,10 @@ MonoBehaviour:
   time: 0
   isTimeReset: 0
   isLogRecode: 0
-  isResetCompleted: 0
-  cycle_RecordingTime: 1
-  cycle_ResetTime: 1
+  isTimeSaved: 0
+  cycle_RecordingTime: 0.2
+  cycle_ResetTime: 0.2
+  delay_TimeRest: 3
 --- !u!4 &372060199
 Transform:
   m_ObjectHideFlags: 0

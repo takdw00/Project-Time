@@ -9,6 +9,7 @@ public class Character : InteractableObject
     //이동 방향
     private Vector3 move_Direction;
     private Vector3 attack_Direction;
+    private Vector3 look_Direction;
     protected float prevMoveDirection_X;
 
     //출력 애니메이션 클립 번호
@@ -227,6 +228,9 @@ public class Character : InteractableObject
     //공격 방향
     public Vector3 Attack_Direction { get { return attack_Direction; } set { attack_Direction = value; } }
 
+    //애니 방향
+    public Vector3 Look_Direction { get { return look_Direction; } set { look_Direction = value; } }
+
     //공격 대상 레이어 마스크
     ///읽기 전용
     public LayerMask Enemy_layerMask { get { return enemy_LayerMask; } }
@@ -272,5 +276,15 @@ public class Character : InteractableObject
         characterObjectManager = GameObject.Find("CharacterObjectManager").GetComponent<CharacterObjectManager>();
 
         characterObjectManager.AddObjectList(this);
+    }
+    
+    protected void MyTimeResetEnd(bool isTimeRest)
+    {
+        //if(!isTimeRest)
+        //{
+        //    IsIdle = true;
+        //    IsMove = false;
+        //    isDodge = false;
+        //}
     }
 }

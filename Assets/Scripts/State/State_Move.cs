@@ -19,16 +19,25 @@ public class State_Move : State
     {
         CharacterRef.MyAnimator.runtimeAnimatorController = AnimatorController_CharacterState;
 
-        if(CharacterRef.Move_Direction.x==0)
+        if(timeManager.isTimeReset)
+        {
+            CharacterRef.Look_Direction = -CharacterRef.Move_Direction;
+        }
+        else
+        {
+            CharacterRef.Look_Direction = CharacterRef.Move_Direction;
+        }
+
+        if(CharacterRef.Look_Direction.x==0)
         {
             CharacterRef.MyAnimator.SetFloat("Direction_X", CharacterRef.PrevMoveDirection_X);
             CharacterRef.MyAnimator.SetFloat("Direction_Y", 0);
         }
         else
         {
-            CharacterRef.MyAnimator.SetFloat("Direction_X", CharacterRef.Move_Direction.x);
-            CharacterRef.MyAnimator.SetFloat("Direction_Y", CharacterRef.Move_Direction.y);
-            CharacterRef.PrevMoveDirection_X = CharacterRef.Move_Direction.x;
+            CharacterRef.MyAnimator.SetFloat("Direction_X", CharacterRef.Look_Direction.x);
+            CharacterRef.MyAnimator.SetFloat("Direction_Y", CharacterRef.Look_Direction.y);
+            CharacterRef.PrevMoveDirection_X = CharacterRef.Look_Direction.x;
         }
         CharacterRef.MyAnimator.speed = animation_Speed;
     }

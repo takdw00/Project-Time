@@ -9,6 +9,9 @@ public class PCharacter : Character
     [SerializeField] Gun clocksGun;
     Gun currentGun;
 
+    TimeManager timeManager;
+
+
     [SerializeField] bool isCurrentSelectedCharacter;
 
 
@@ -40,6 +43,8 @@ public class PCharacter : Character
 
         characterObjectManager.AddObjectList(this);
 
+        timeManager= GameObject.Find("TimeManager").GetComponent<TimeManager>();
+
         //캐릭터 기본 애니메이션 (Idle)
         MyAnimator.runtimeAnimatorController = IdleState.AnimatorController_CharacterState;
         prevMoveDirection_X = 1;
@@ -59,6 +64,8 @@ public class PCharacter : Character
         player_Control.ControlCommand();
 
         CurrentState.Animation();
+
+        //MyTimeResetEnd(timeManager.isTimeReset);
     }
 
 

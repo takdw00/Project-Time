@@ -93,6 +93,7 @@ public class TimeManager : MonoBehaviour
                 }
                 if (objectsAction.Count == 0)
                 {
+
                     isTimeReset = false;
                     isTimeSaved = false;
                     Debug.Log("가져올 로그 없음.");
@@ -122,54 +123,6 @@ public class TimeManager : MonoBehaviour
 
         }
     }
-
-
-    //void ResetExecution()
-    //{
-    //    // 모든 캐릭터의 제일 마지막에 기록 된 로그를 가져온다.
-    //    if (isTimeReset) 
-    //    {
-    //        if (isResetCompleted && (characterObjectManager.characterList.Count != 0))
-    //        {
-    //            foreach (var character in characterObjectManager.characterList)
-    //            {
-    //                // 가져온 로그를 다른 리스트에 저장.
-    //                ObjectAction temp = character.GetComponent<ObjectLog>().GetLog();
-    //                if(temp!=null)
-    //                {
-    //                    objectsAction.Add(temp);
-    //                }
-    //            }
-    //            Debug.Log("                     모든 캐릭터의 한 사이클 로그를 가져 옴...");
-    //            if (objectsAction.Count==0)
-    //            {
-    //                isTimeReset = false;
-    //                return;
-    //            }
-    //            // 가져온 로그를 실행 해야하기 때문에 false 로 바꿈
-    //            isResetCompleted = false;
-    //        }
-    //        else
-    //        {
-    //            // 가져온 로그 리스트가 비어있지 않을 때.
-    //            now_ResetTime += Time.deltaTime;
-    //            if (now_ResetTime >= cycle_ResetTime)
-    //            {
-    //                now_ResetTime = 0;
-    //                foreach (var objectAction in objectsAction)
-    //                {
-    //                    objectAction.ReplayAction();
-    //                }
-    //                time-=1;
-    //                objectsAction.Clear();
-    //                isResetCompleted = true; // 모든 로그의 리플레이가 완료 되면 true 로 바꿈
-
-    //                Debug.Log("                         모든 캐릭터에 대해서 시간 리셋 한 사이클 진행 완료.");
-    //            }
-    //            return;
-    //        }
-    //    }
-    //}
 
     public void SetIsTimeReset(bool isEnable)
     {
