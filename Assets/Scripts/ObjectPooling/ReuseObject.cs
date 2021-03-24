@@ -35,6 +35,7 @@ public class ReuseObject : MonoBehaviour
 
     private void FixedUpdate()
     {
+        RotationProjectile(moveDirection);
         BulletMove(moveDirection);
     }
     // Update is called once per frame
@@ -82,5 +83,11 @@ public class ReuseObject : MonoBehaviour
     private void OnDisable()
     {
         myRigidbody.Sleep();
+    }
+
+    void RotationProjectile(Vector3 direction)
+    {
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 }

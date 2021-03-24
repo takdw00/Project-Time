@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,6 +14,18 @@ TagManager:
   - UI
   - 
   - 
+  - Level
+  - Enemy
+  - Usable
+  - Interactable
+  - IgnorePlayer
+  - Player
+  - Cameras
+  - LitSprites
+  - Destructable
+  - EnemyWeapon
+  - BossWeakPoint
+  - Bullet
   - 
   - 
   - 
@@ -23,21 +36,39 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerDrop
+  - Platform
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 2344118779
+    locked: 0
+  - name: Mist Back
+    uniqueID: 2419060337
+    locked: 0
+  - name: Map Object 1
+    uniqueID: 3560299299
+    locked: 0
+  - name: Road
+    uniqueID: 3405993979
+    locked: 0
+  - name: Ground
+    uniqueID: 2116099231
+    locked: 0
+  - name: Map Object 2
+    uniqueID: 2048261025
+    locked: 0
+  - name: Character
+    uniqueID: 1760456493
+    locked: 0
+  - name: Weapon
+    uniqueID: 3836083017
+    locked: 0
+  - name: Projectile
+    uniqueID: 680975399
+    locked: 0
+  - name: Mist Front
+    uniqueID: 1293944987
     locked: 0

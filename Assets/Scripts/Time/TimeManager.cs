@@ -111,7 +111,7 @@ public class TimeManager : MonoBehaviour
                 {
                     objectAction.ReplayAction();
                 }
-                time -= 1;
+                time -= cycle_ResetTime;
                 objectsAction.Clear();
                 //isResetCompleted = true; // 모든 로그의 리플레이가 완료 되면 true 로 바꿈
 
