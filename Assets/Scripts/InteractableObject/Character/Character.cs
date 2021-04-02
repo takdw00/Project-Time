@@ -21,6 +21,9 @@ public class Character : InteractableObject
     //캐릭터 리스트 관리 매니저
     protected CharacterObjectManager characterObjectManager;
 
+    //타임 매니저
+    protected TimeManager timeManager;
+
     #region Character Stat Variables
 
     //SerailizeField로 한 것들은 인스펙터에서 디자인할 수 있도록 함

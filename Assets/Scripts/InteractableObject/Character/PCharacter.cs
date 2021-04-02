@@ -9,10 +9,10 @@ public class PCharacter : Character
     [SerializeField] Gun clocksGun;
     Gun currentGun;
 
-    TimeManager timeManager;
 
 
-    [SerializeField] bool isCurrentSelectedCharacter;
+
+    //[SerializeField] bool isCurrentSelectedCharacter;
 
 
     #region Properties
@@ -43,7 +43,7 @@ public class PCharacter : Character
 
         characterObjectManager.AddObjectList(this);
 
-        timeManager= GameObject.Find("TimeManager").GetComponent<TimeManager>();
+        timeManager = GameObject.Find("TimeManager").GetComponent<TimeManager>();
 
         //캐릭터 기본 애니메이션 (Idle)
         MyAnimator.runtimeAnimatorController = IdleState.AnimatorController_CharacterState;

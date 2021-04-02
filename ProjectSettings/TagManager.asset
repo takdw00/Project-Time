@@ -45,6 +45,9 @@ TagManager:
   - name: BackGround
     uniqueID: 2344118779
     locked: 0
+  - name: Star
+    uniqueID: 2494851581
+    locked: 0
   - name: Mist Back
     uniqueID: 2419060337
     locked: 0

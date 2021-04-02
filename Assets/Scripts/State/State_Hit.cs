@@ -12,7 +12,14 @@ public class State_Hit : State , IDamageable
 
     public override void Animation()
     {
+        if (!(AnimatorController_CharacterState == null))
+        {
 
+        }
+        else
+        {
+            return;
+        }
     }
 
     public void TakeDamage()

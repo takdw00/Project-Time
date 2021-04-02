@@ -20,7 +20,14 @@ public class State_Dodge : State
 
     public override void Animation()
     {
+        if (!(AnimatorController_CharacterState == null))
+        {
 
+        }
+        else
+        {
+            return;
+        }
     }
 
     void Dodge()

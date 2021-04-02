@@ -5,6 +5,9 @@ public abstract class State : MonoBehaviour
     private Character characterRef;
 
     protected TimeManager timeManager;
+
+    public bool isActive; // 유니티 에디터에서 어떤 상태 활성화 되어있는지 확인용
+
     protected Character CharacterRef { get { return characterRef; } private set { } }
 
 
